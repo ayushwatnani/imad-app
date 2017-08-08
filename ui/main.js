@@ -17,7 +17,7 @@ button.onClick = function(){
     }
     
     //Make the request.
-    request.open('GET', 'http://ayushwatnani.imad.hasura-app.io/', true);
+    request.open('GET', 'http://ayushwatnani.imad.hasura-app.io/counter', true);
     request.send(null);
    
    
