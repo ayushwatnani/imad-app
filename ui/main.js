@@ -26,7 +26,7 @@ button.onclick = function () {
 
 //Submit name
 
-var submit = document.getElementById('submit_bth');
+var submit = document.getElementById('submit_btn');
 submit.onclick = function(){
   //create a request object
   var request = new XMLHttpRequest();
@@ -51,6 +51,6 @@ submit.onclick = function(){
   
   var nameInput = document.getElementById('name');
   var name = nameInput.value;
-  request.open('GET', 'http://ayushwatnani.imad.hasura-app.io/submit-name?name='+name, true);
+  request.open('GET', 'http://ayushwatnani.imad.hasura-app.io/submit-name?name='+ name, true);
   request.send(null);
 };
