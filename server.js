@@ -14,32 +14,6 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 
-var articles={
-    'article-one' : {
-        title:' Article one | Ayush Watnani',
-        heading:'Article one' ,
-        date: 'August 7, 2017',
-        content: `<p>
-                    This is article 1     
-                  </p>`
-    },
-    'article-two' : {
-        title:' Article two | Ayush Watnani',
-        heading:'Article two',
-        date: 'August 7, 2017',
-        content: `<p>
-                    This is article 2     
-                  </p>`
-    },
-    'article-three' : {
-        title:' Article three | Ayush Watnani',
-        heading:'Article three' ,
-        date: 'August 7, 2017',
-        content: `<p>
-                    This is article 3     
-                  </p>`
-    }
-};
 
 function createTemplate(data){
     var title = data.title;
@@ -106,7 +80,7 @@ app.get('/counter', function(req, res){
 
 var names=[];
 app.get('/submit-name', function(req, res){
-    // GET the name from the request
+    // GET the name fr om the request
     var name = req.query.name;
     names.push(name);
     res.send(JSON.stringify(names));
