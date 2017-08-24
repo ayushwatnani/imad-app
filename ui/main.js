@@ -7,11 +7,9 @@ submit.onclick = function(){
   
   //capture the response and store it in a variable
   request.onreadystatechange = function() {
-      if(request.readyState === XMLHttpRequest.DONE){
+      if(request.readyState === XMLHttpRequest.DONE){   
           //take some action
           if(request.status === 200){
-              //capture a list of names and render it as a list
-             console.log('user logged in');
              alert('Logged in successfully');
           }else if(request.status === 403){
               alert('username/password incorrect');
